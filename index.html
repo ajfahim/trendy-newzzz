@@ -82,12 +82,13 @@
     <main>
         <!-- number of results -->
         <div class="container mt-5 bg-white py-4 rounded">
-            <p class="mb-0">4 items found for category Entertainment</p>
+            <p class="mb-0"><span id="result-count">4</span> items found for category <span
+                    id="category-name">Entertainment</span></p>
         </div>
 
         <!-- cards  -->
         <article class="container mt-5" id="cards">
-           
+
 
         </article>
 
@@ -95,6 +96,43 @@
     <!---------------------------------------
                     main section  end             
         ----------------------------------------->
+    <footer>
+        <p class="py-5 text-muted text-center bg-white">Copyright 2022 Trendy Newzzz</p>
+    </footer>
+
+    <!-- modal  -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <section id ="modal-elemant" class="container">
+                    
+                    <h1> Welcome to Blog Post!</h1>
+                    <p class="text-muted">Posted on <span>date</span></p>
+                    <p class="text-muted">Posted by <span>name</span></p>
+                    <div class="my-3">
+                        <img class="img-fluid" src="images/—Pngtree—human avatar free vector_4825373.png" alt="">
+                    </div>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eaque aspernatur dolore minus reiciendis, quam similique temporibus dicta ex? Dolorum, rem veritatis consequatur laudantium illo vel eius, pariatur animi suscipit aut itaque provident. Ducimus quis perspiciatis illo, exercitationem quas voluptate veniam voluptatum repellendus expedita repudiandae nesciunt corporis. Porro maxime blanditiis odio vel deleniti commodi reprehenderit velit iste voluptas temporibus voluptate quae id, error consequuntur quaerat expedita amet adipisci repellendus itaque, soluta dolore, sapiente quos? Voluptates deleniti unde nemo, laudantium ipsam voluptas architecto, id tempora sapiente delectus iure maxime facere recusandae dicta consectetur tenetur voluptatem alias voluptatibus dolorum earum explicabo aperiam.</p>
+                    </div>
+                </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
