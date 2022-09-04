@@ -62,33 +62,12 @@ const getNewsByCaterory = async id => {
 
 }
 
-const getCategoryNameById = async id =>{
-    const categories = await getCategories()
-    const url = 'https://openapi.programming-hero.com/api/news/categories';
-    try {
-        const res = await fetch(url);
-        const data = await res.json();
-        console.log( "I have data ", data.data.news_category)
-        await data.data.news_category.forEach( async category =>{
-            if(category.category_id === id){
-                 return await category.category_name
-            }
-        })
-       
-    }
-    catch (err) {
-        console.log(err)
-    }
 
-  
-}
 
-const setItemCountAndCategoryName = (number, name)=>{
+const setItemCountAndCategoryName = (number)=>{
     const resultCount = document.getElementById("result-count");
-    const categoryName = document.getElementById("category-name");
     resultCount.innerText = number;
-    categoryName.innerText = name; 
-    // console.log(number, name)
+ 
 }
 // setItemCount();
 
@@ -97,8 +76,8 @@ const setItemCountAndCategoryName = (number, name)=>{
 const renderNewsCards = async id=>{
     toggleSpinner(true);
     const cards = await getNewsByCaterory(id);
-    const name = await getCategoryNameById(id)
-   await setItemCountAndCategoryName(cards.length, name);
+    
+   await setItemCountAndCategoryName(cards.length);
 
     const cardsElement = document.getElementById("cards");
     cardsElement.innerHTML ="";
