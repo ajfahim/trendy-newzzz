@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Newzzz</title>
+    <!-- bootstrap cdn   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- css link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awsome  -->
+    <script src="https://kit.fontawesome.com/45a12cb216.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="body-color">
+
+    <!---------------------------------------
+                    herder section  Start             
+        ----------------------------------------->
+    <header>
+        <!-- nav bar start -->
+        <section>
+            <nav class="navbar navbar-expand-lg pt-5">
+                <div class="container">
+                    <a class="navbar-brand text-primary" href="#">Trendy <span
+                            class="p-2 text-white bg-primary rounded fw-bold">Newzzz</span> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary fw-bold" aria-current="page" href="/">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary fw-bold" aria-current="page" href="/blog.html">Blog</a>
+                            </li>
+
+                        </ul>
+                        <span class="navbar-text">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">
+                                    <img class="img-fluid" src="images/—Pngtree—human avatar free vector_4825373.png"
+                                        alt="" width="30" height="24" class="d-inline-block align-text-top">
+
+                                </a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+            <hr class="border border-dark border-1 opacity-50 container">
+        </section>
+        <!-- nav bar end  -->
+
+        
+    </header>
+    <!---------------------------------------
+                    herder section  end             
+        ----------------------------------------->
+
+    <!---------------------------------------
+                    main section  Start             
+        ----------------------------------------->
+    <main class="container my-5">
+    
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   Difference between regular and arrow function
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                        Function expressions are best for object methods. Arrow functions are best for callbacks or methods like map , reduce , or forEach . Use function declarations for functions you'd call by name (because they're hoisted). Use arrow functions for callbacks (because they tend to be terser).
+                    </li>
+                    <li>
+                        Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.
+                    </li>
+                    <li>
+
+An arrow function doesn't have its own this value and the arguments object. Therefore, you should not use it as an event handler, a method of an object literal, a prototype method, or when you have a function that uses the arguments object.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Difference between var let and const
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h4>var:</h4>
+                    <ul>
+                        <li>hoisted (always declared at top of scope, global if none)</li>
+                        <li>function scope</li>
+                    </ul>
+                    
+                <h4>let:</h4>
+                <ul>
+                    <li>block scope</li>
+                    <li>not redeclarable</li>
+                </ul>
+                    
+                <h4>const: </h4>
+                <ul>
+                    <li>block scope</li>
+                    <li>not reassignable</li>
+                    <li>not redeclarable</li>
+                </ul>
+                    
+                    
+                Note: Although it may seem like these hold only semantic meaning, using the
+                appropriate keywords helps the JS engines' compiler to decide on what to optimize.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Why we use template string
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.
+
+                    Template literals are sometimes informally called template strings, because they are used most commonly for string interpolation (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom tag function to perform whatever operations you want on the different parts of the template literal.
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </main>
+    <!---------------------------------------
+                    main section  end             
+        ----------------------------------------->
+<!-- spinner -->
+
+
+
+    <footer>
+        <p class="py-5 text-muted text-center bg-white">Copyright 2022 Trendy Newzzz</p>
+    </footer>
+
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
