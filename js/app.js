@@ -1,8 +1,18 @@
+function sortJSON(arr, key, asc=true) {
+    return arr.sort((a, b) => {
+      let x = a[key];
+      let y = b[key];
+      if (asc) { return ((x < y) ? -1 : ((x > y) ? 1 : 0)); }
+      else { return ((x > y) ? -1 : ((x < y) ? 1 : 0)); }
+    });
+  }
+  
 const getCategories = async () => {
     const url = 'https://openapi.programming-hero.com/api/news/categories';
     try {
         const res = await fetch(url);
         const data = await res.json();
+       
         return await data.data.news_category
     }
     catch (err) {
@@ -36,8 +46,10 @@ const getNewsByCaterory = async id => {
     try {
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data.data)
-        return await data.data
+        console.log(data.data);
+        const sorted = await sortJSON(data.data, "total_view", true)
+        console.log("sorted", sorted)
+        return await sorted
     }
     catch (err) {
         console.log(err)
