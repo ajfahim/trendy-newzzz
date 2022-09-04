@@ -6,6 +6,11 @@ function sortJSON(arr, key, asc=true) {
       else { return ((x > y) ? -1 : ((x < y) ? 1 : 0)); }
     });
   }
+
+  const toggleSpinner = (isLoaging)=>{
+    const spinner = document.getElementById("spinner-element");
+    isLoaging ? spinner.classList.remove("d-none") : spinner.classList.add("d-none");
+  }
   
 const getCategories = async () => {
     const url = 'https://openapi.programming-hero.com/api/news/categories';
@@ -47,7 +52,7 @@ const getNewsByCaterory = async id => {
         const res = await fetch(url);
         const data = await res.json();
         console.log(data.data);
-        const sorted = await sortJSON(data.data, "total_view", true)
+        const sorted = await sortJSON(data.data, "total_view", false)
         console.log("sorted", sorted)
         return await sorted
     }
@@ -90,6 +95,7 @@ const setItemCountAndCategoryName = (number, name)=>{
 
 
 const renderNewsCards = async id=>{
+    toggleSpinner(true);
     const cards = await getNewsByCaterory(id);
     const name = await getCategoryNameById(id)
    await setItemCountAndCategoryName(cards.length, name);
@@ -155,7 +161,10 @@ const renderNewsCards = async id=>{
                 </div>
         `;
         cardsElement.appendChild(div)
-    })
+        
+    });
+    toggleSpinner(false);
+    
     
 }
 renderNewsCards('08');
